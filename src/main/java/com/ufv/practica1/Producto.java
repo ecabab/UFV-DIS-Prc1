@@ -86,7 +86,4 @@ public class Producto {
 	public void setPendientes(int pendientes) {
 		this.pendientes = pendientes;
 	}
-	
-	
-
 }
