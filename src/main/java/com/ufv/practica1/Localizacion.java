@@ -1,12 +1,12 @@
 package com.ufv.practica1;
 
 public class Localizacion {
-	private int pasillo;
-	private int estanteria;
-	private int estante;
+	private String pasillo;
+	private String estanteria;
+	private String estante;
 	
 	
-	public Localizacion(int pasillo, int estanteria, int estante) {
+	public Localizacion(String pasillo, String estanteria, String estante) {
 		super();
 		this.pasillo = pasillo;
 		this.estanteria = estanteria;
@@ -20,32 +20,32 @@ public class Localizacion {
 	}
 
 
-	public int getPasillo() {
+	public String getPasillo() {
 		return pasillo;
 	}
 
 
-	public void setPasillo(int pasillo) {
+	public void setPasillo(String pasillo) {
 		this.pasillo = pasillo;
 	}
 
 
-	public int getEstanteria() {
+	public String getEstanteria() {
 		return estanteria;
 	}
 
 
-	public void setEstanteria(int estanteria) {
+	public void setEstanteria(String estanteria) {
 		this.estanteria = estanteria;
 	}
 
 
-	public int getEstante() {
+	public String getEstante() {
 		return estante;
 	}
 
 
-	public void setEstante(int estante) {
+	public void setEstante(String estante) {
 		this.estante = estante;
 	}
 

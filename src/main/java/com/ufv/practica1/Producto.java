@@ -1,7 +1,7 @@
 package com.ufv.practica1;
 
 public class Producto {
-	private int codigo;
+	private String codigo;
 	private String nombre;
 	private String descripcion;
 	private int stock;
@@ -9,7 +9,7 @@ public class Producto {
 	private int pendientes;
 	
 	
-	public Producto(int codigo, String nombre, String descripcion, int stock, Localizacion localizacion,
+	public Producto(String codigo, String nombre, String descripcion, int stock, Localizacion localizacion,
 			int pendientes) {
 		super();
 		this.codigo = codigo;
@@ -28,12 +28,12 @@ public class Producto {
 	}
 
 	
-	public int getCodigo() {
+	public String getCodigo() {
 		return codigo;
 	}
 
 
-	public void setCodigo(int codigo) {
+	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
 
