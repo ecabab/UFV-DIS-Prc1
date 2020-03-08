@@ -6,6 +6,9 @@ public class Cliente {
 	private String email;
 	private int telefono;
 	private Direccion direccion;
+	public Cliente() {
+		
+	}
 
 	public Cliente(String nombre, String apellidos, String email, int telefono, Direccion direccion) {
 		super();

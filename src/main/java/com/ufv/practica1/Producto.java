@@ -8,6 +8,9 @@ public class Producto {
 	private Localizacion localizacion;
 	private int pendientes;
 	
+	public Producto() {
+		
+	}
 	
 	public Producto(int codigo, String nombre, String descripcion, int stock, Localizacion localizacion,
 			int pendientes) {

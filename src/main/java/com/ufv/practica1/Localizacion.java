@@ -5,7 +5,9 @@ public class Localizacion {
 	private int estanteria;
 	private int estante;
 	
-	
+	public Localizacion() {
+		
+	}
 	public Localizacion(int pasillo, int estanteria, int estante) {
 		super();
 		this.pasillo = pasillo;

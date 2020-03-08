@@ -7,6 +7,9 @@ public class Direccion {
 	private String poblacion;
 	private String pais;
 
+	public Direccion() {
+		
+	}
 	public Direccion(String calle, int numero, int codigoPostal, String poblacion, String pais) {
 		super();
 		this.setCalle(calle);
