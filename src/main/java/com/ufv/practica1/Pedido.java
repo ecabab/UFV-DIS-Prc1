@@ -7,6 +7,10 @@ public class Pedido {
 	private String nombre;
 	private String fecha;
 
+	public Pedido() {
+		
+	}
+	
 	public Pedido(String producto, int cantidad, Direccion direccion, String nombre, String fecha) {
 		super();
 		this.producto = producto;

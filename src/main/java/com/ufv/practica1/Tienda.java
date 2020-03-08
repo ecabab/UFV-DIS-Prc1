@@ -2,6 +2,10 @@ package com.ufv.practica1;
 
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+
+@XmlRootElement(name= "tienda")
 public class Tienda {
 	//Definimos las listas de productos que va a contener nuestra tienda
 	private List <Cliente> clientes;
