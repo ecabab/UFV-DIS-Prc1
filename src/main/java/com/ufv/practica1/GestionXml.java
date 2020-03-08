@@ -22,7 +22,7 @@ public class GestionXml {
 		Tienda que = null;
 		// TODO Auto-generated method stub
 		try {
-			File file = new File("XmlRead.xml");
+			File file = new File("XmlBackup.xml");
 			JAXBContext jaxbContext = JAXBContext.newInstance(Tienda.class);  
 	        Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();  
 	        
@@ -48,7 +48,7 @@ public class GestionXml {
 		    marshallerObj.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 		    Tienda tienda = parametro;
 			try {
-				marshallerObj.marshal(tienda, new FileOutputStream("XmlWrite.xml"));
+				marshallerObj.marshal(tienda, new FileOutputStream("XmlBackup.xml"));
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

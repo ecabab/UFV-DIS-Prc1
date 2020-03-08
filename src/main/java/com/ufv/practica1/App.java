@@ -18,8 +18,10 @@ public class App
     	List<Producto> productos = new ArrayList<Producto>();
     	List<Cliente> clientes = new ArrayList<Cliente>();
     	List<Pedido> pedidos = new ArrayList<Pedido>();
-    	
-    	
+    	tienda =  GestionXml.ReadXML();
+    	productos = tienda.getProductos();
+    	clientes = tienda.getClientes();
+    	pedidos = tienda.getPedidos();
         int menu = -1;
         
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
@@ -46,7 +48,7 @@ public class App
         		tienda.setProductos(productos);
         		tienda.setClientes(clientes);
         		tienda.setPedidos(pedidos);
-        		
+        		GestionXml.CreateXML(tienda);
         		for (Producto producto: productos) {
         			System.out.println(producto.toString());
         		}
