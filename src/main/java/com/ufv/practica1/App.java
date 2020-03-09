@@ -18,10 +18,12 @@ public class App
     	List<Producto> productos = new ArrayList<Producto>();
     	List<Cliente> clientes = new ArrayList<Cliente>();
     	List<Pedido> pedidos = new ArrayList<Pedido>();
-    	tienda =  GestionXml.ReadXML();
+    	
+    	tienda =  GestionXml.readXML();
     	productos = tienda.getProductos();
     	clientes = tienda.getClientes();
     	pedidos = tienda.getPedidos();
+    	
         int menu = -1;
         
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
@@ -36,27 +38,34 @@ public class App
         		Producto nuevo_producto = crearProducto();
         		productos.add(nuevo_producto);
         		break;
+        		
         	case 2:
         		Cliente nuevo_cliente = crearCliente();
         		clientes.add(nuevo_cliente);
         		break;
+        		
         	case 3:
         		Pedido nuevo_pedido = crearPedido();
         		pedidos.add(nuevo_pedido);
         		break;
+        		
         	case 4:
         		tienda.setProductos(productos);
         		tienda.setClientes(clientes);
         		tienda.setPedidos(pedidos);
-        		GestionXml.CreateXML(tienda);
-        		for (Producto producto: productos) {
-        			System.out.println(producto.toString());
+        		GestionXml.createXML(tienda);
+        		break;
+        		
+        	case 5:
+        		System.out.println("DATOS DE LA TIENDA:");
+        		for (Producto producto: tienda.getProductos()) {
+        			System.out.println("\t" + producto.toString());
         		}
-        		for (Cliente cliente: clientes) {
-        			System.out.println(cliente.toString());
+        		for (Cliente cliente: tienda.getClientes()) {
+        			System.out.println("\t" + cliente.toString());
         		}
-        		for (Pedido pedido: pedidos) {
-        			System.out.println(pedido.toString());
+        		for (Pedido pedido: tienda.getPedidos()) {
+        			System.out.println("\t" + pedido.toString());
         		}
         	}
         	
@@ -71,6 +80,7 @@ public class App
     	System.out.println("2. Crear Cliente");
     	System.out.println("3. Crear Pedido");
     	System.out.println("4. Exportar XML");
+    	System.out.println("5. Mostrar datos cargados");
     }
     
     public static Producto crearProducto() throws IOException {
