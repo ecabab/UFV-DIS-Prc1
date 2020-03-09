@@ -6,10 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
     public static void main( String[] args ) throws NumberFormatException, IOException
@@ -68,10 +65,7 @@ public class App
         			System.out.println("\t" + pedido.toString());
         		}
         	}
-        	
         }
-        
-        
     }
     
     public static void mostrarMenu() {

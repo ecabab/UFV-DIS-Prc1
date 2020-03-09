@@ -19,7 +19,8 @@ public class Tienda {
 		super();
 	}
 	
-	
+
+	//Metodos asociados a las listas
 	@XmlElementWrapper(name="productos")
 	@XmlElement(name="producto")
 	public List<Producto> getProductos() {
@@ -29,7 +30,6 @@ public class Tienda {
 		this.productos = productos;
 	}
 	
-	//Metodos asociados a las listas
 	@XmlElementWrapper(name="clientes")
 	@XmlElement(name="cliente")
 	public List<Cliente> getClientes() {

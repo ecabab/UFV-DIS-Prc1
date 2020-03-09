@@ -37,6 +37,9 @@ public class GestionXml {
 			marshallerObj = contextObj.createMarshaller();
 			marshallerObj.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			
+			// Creación del DTD
+			marshallerObj.setProperty("com.sun.xml.internal.bind.xmlHeaders", generarDTD());
+			
 			try {
 				marshallerObj.marshal(datos_tienda, new FileOutputStream("Tienda_XML.xml"));
 			} catch (FileNotFoundException e) {
@@ -47,5 +50,12 @@ public class GestionXml {
 			e.printStackTrace();
 		}
 
+	}
+	
+	public static String generarDTD() {
+		String dtd = "\n<!DOCTYPE TIENDA ["
+				+ "\n]>";
+		
+		return dtd;
 	}
 }
