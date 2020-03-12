@@ -54,7 +54,42 @@ public class GestionXml {
 	
 	public static String generarDTD() {
 		String dtd = "\n<!DOCTYPE TIENDA ["
-				+ "\n]>";
+							+"<!ELEMENT CLIENTES (cliente+)>\n"
+							+"<!ELEMENT cliente (nombre, apellidos, email, telefono, direccion)>\n"
+							+"<!ELEMENT nombre (#PCDATA)>\n"
+							+"<!ELEMENT apellidos (#PCDATA)>\n"
+							+"<!ELEMENT email (#PCDATA)>\n"
+							+"<!ELEMENT telefono (#PCDATA)>\n"
+							+"<!ELEMENT direccion (#PCDATA)>\n"
+							+"<!ATTLIST direccion calle CDATA #REQUIRED>\n"
+							+"<!ATTLIST direccion numero CDATA #REQUIRED>\n"
+							+"<!ATTLIST direccion codigoPostal CDATA #REQUIRED>\n"
+							+"<!ATTLIST direccion poblacion CDATA #IMPLIED>\n"
+							+"<!ATTLIST direccion pais CDATA #REQUIRED>\n"
+							+"<!ELEMENT PRODUCTOS (producto+)>\n"
+							+"<!ELEMENT producto (codigo, nombre, descripcion, stock, localizacion, pendientes)>\n"
+							+"<!ELEMENT codigo (#PCDATA)>\n"
+							+"<!ELEMENT nombre (#PCDATA)>\n"
+							+"<!ELEMENT descripcion (#PCDATA)>\n"
+							+"<!ELEMENT stock (#PCDATA)>\n"
+							+"<!ELEMENT localizacion (#PCDATA)>\n"
+							+"<!ATTLIST localizacion pasillo CDATA #REQUIRED>\n"
+							+"<!ATTLIST localizacion estanteria CDATA #REQUIRED>\n"
+							+"<!ATTLIST localizacion estante CDATA #REQUIRED>\n"
+							+"<!ELEMENT pendientes (#PCDATA)>\n"
+							+"<!ELEMENT PEDIDOS (pedido+)>\n"
+							+"<!ELEMENT pedido (nombreProducto, cantidad, direccion, nombre, fecha>\n"
+							+"<!ELEMENT nombreProducto (#PCDATA)>\n"
+							+"<!ELEMENT cantidad (#PCDATA)>\n"
+							+"<!ELEMENT direccion (#PCDATA)>\n"
+							+"<!ATTLIST direccion calle CDATA #REQUIRED>\n"
+							+"<!ATTLIST direccion numero CDATA #REQUIRED>\n"
+							+"<!ATTLIST direccion codigoPostal CDATA #REQUIRED>\n"
+							+"<!ATTLIST direccion poblacion CDATA #IMPLIED>\n"
+							+"<!ATTLIST direccion pais CDATA #REQUIRED>\n"
+							+"<!ELEMENT nombre (#PCDATA)>\n"
+							+"<!ELEMENT fecha (#PCDATA)>\n"
+							+ "]>";
 		
 		return dtd;
 	}
