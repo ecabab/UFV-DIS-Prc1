@@ -1,7 +1,7 @@
 package com.ufv.practica1;
 
 public class Pedido {
-	private String producto;
+	private String nombreProducto;
 	private int cantidad;
 	private Direccion direccion;
 	private String nombre;
@@ -11,9 +11,9 @@ public class Pedido {
 		
 	}
 	
-	public Pedido(String producto, int cantidad, Direccion direccion, String nombre, String fecha) {
+	public Pedido(String nombreProducto, int cantidad, Direccion direccion, String nombre, String fecha) {
 		super();
-		this.producto = producto;
+		this.nombreProducto = nombreProducto;
 		this.cantidad = cantidad;
 		this.direccion = direccion;
 		this.nombre = nombre;
@@ -22,16 +22,16 @@ public class Pedido {
 	
 	@Override
 	public String toString() {
-		return "Pedido [producto=" + producto + ", cantidad=" + cantidad + ", direccion=" + direccion + ", nombre="
+		return "Pedido [nombreProducto=" + nombreProducto + ", cantidad=" + cantidad + ", direccion=" + direccion + ", nombre="
 				+ nombre + ", fecha=" + fecha + "]";
 	}
 
-	public String getProducto() {
-		return producto;
+	public String getNombreProducto() {
+		return nombreProducto;
 	}
 
-	public void setProducto(String producto) {
-		this.producto = producto;
+	public void setNombreProducto(String nombreProducto) {
+		this.nombreProducto = nombreProducto;
 	}
 
 	public int getCantidad() {
