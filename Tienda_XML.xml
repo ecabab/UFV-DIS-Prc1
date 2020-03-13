@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE tienda [<!ELEMENT tienda (productos, clientes, pedidos)>
+<!ELEMENT clientes (cliente*)>
+<!ELEMENT cliente (nombre, apellidos, email, telefono, direccion)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT direccion (calle, numero, codigoPostal, poblacion, pais)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT codigoPostal (#PCDATA)>
+<!ELEMENT poblacion (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT pedidos (pedido*)>
+<!ELEMENT pedido (nombre, cantidad, direccion, destinatario, fecha)>
+<!ELEMENT destinatario (#PCDATA)>
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT productos (producto*)>
+<!ELEMENT producto (codigo, nombre, descripcion, stock, localizacion, pendientes)>
+<!ELEMENT codigo (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT stock (#PCDATA)>
+<!ELEMENT localizacion (pasillo, estanteria, estante)>
+<!ELEMENT pasillo (#PCDATA)>
+<!ELEMENT estanteria (#PCDATA)>
+<!ELEMENT estante (#PCDATA)>
+<!ELEMENT pendientes (#PCDATA)>
+]>
+<tienda>
+    <productos>
+        <producto>
+            <codigo>1234</codigo>
+            <nombre>Ordenador</nombre>
+            <descripcion>PC cuántico</descripcion>
+            <stock>5</stock>
+            <localizacion>
+                <pasillo>A</pasillo>
+                <estanteria>2</estanteria>
+                <estante>3</estante>
+            </localizacion>
+            <pendientes>15</pendientes>
+        </producto>
+    </productos>
+    <clientes>
+        <cliente>
+            <nombre>Pedro</nombre>
+            <apellidos>Jiménez</apellidos>
+            <email>pjimenez@gmail.com</email>
+            <telefono>638293849</telefono>
+            <direccion>
+                <calle>Gran Vía</calle>
+                <numero>34</numero>
+                <codigoPostal>28000</codigoPostal>
+                <poblacion>Madrid</poblacion>
+                <pais>España</pais>
+            </direccion>
+        </cliente>
+    </clientes>
+    <pedidos>
+        <pedido>
+            <nombre>Ordenador</nombre>
+            <cantidad>1</cantidad>
+            <direccion>
+                <calle>Gran Vía</calle>
+                <numero>34</numero>
+                <codigoPostal>28000</codigoPostal>
+                <poblacion>Madrid</poblacion>
+                <pais>España</pais>
+            </direccion>
+            <destinatario>Pedro Jiménez</destinatario>
+            <fecha>25/03/2020</fecha>
+        </pedido>
+    </pedidos>
+</tienda>
