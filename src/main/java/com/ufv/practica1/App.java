@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.bind.JAXBException;
+
 
 public class App 
 {
@@ -16,10 +18,14 @@ public class App
     	List<Cliente> clientes = new ArrayList<Cliente>();
     	List<Pedido> pedidos = new ArrayList<Pedido>();
     	
-    	tienda =  GestionXml.readXML();
-    	productos = tienda.getProductos();
-    	clientes = tienda.getClientes();
-    	pedidos = tienda.getPedidos();
+    	try {
+			tienda =  GestionXml.readXML();
+	    	productos = tienda.getProductos();
+	    	clientes = tienda.getClientes();
+	    	pedidos = tienda.getPedidos();
+		} catch (JAXBException e) {
+			System.out.print("No se ha cargado ningún fichero.\n\n");
+		}
     	
         int menu = -1;
         

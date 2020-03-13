@@ -5,9 +5,11 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 @XmlRootElement(name= "tienda")
+@XmlType (propOrder={"productos", "clientes", "pedidos"})
 public class Tienda {
 	//Definimos las listas de productos que va a contener nuestra tienda
 	private List <Producto> productos;

@@ -1,5 +1,8 @@
 package com.ufv.practica1;
 
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType (propOrder={"nombre", "apellidos", "email", "telefono", "direccion"})
 public class Cliente {
 	private String nombre;
 	private String apellidos;

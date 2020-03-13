@@ -1,5 +1,8 @@
 package com.ufv.practica1;
 
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType (propOrder={"codigo", "nombre", "descripcion", "stock", "localizacion", "pendientes"})
 public class Producto {
 	private String codigo;
 	private String nombre;

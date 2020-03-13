@@ -1,37 +1,40 @@
 package com.ufv.practica1;
 
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType (propOrder={"nombre", "cantidad", "direccion", "destinatario", "fecha"})
 public class Pedido {
-	private String nombreProducto;
+	private String nombre;
 	private int cantidad;
 	private Direccion direccion;
-	private String nombre;
+	private String destinatario;
 	private String fecha;
 
 	public Pedido() {
 		
 	}
 	
-	public Pedido(String nombreProducto, int cantidad, Direccion direccion, String nombre, String fecha) {
+	public Pedido(String nombre, int cantidad, Direccion direccion, String destinatario, String fecha) {
 		super();
-		this.nombreProducto = nombreProducto;
+		this.nombre = nombre;
 		this.cantidad = cantidad;
 		this.direccion = direccion;
-		this.nombre = nombre;
+		this.destinatario = destinatario;
 		this.fecha = fecha;
 	}
 	
 	@Override
 	public String toString() {
-		return "Pedido [nombreProducto=" + nombreProducto + ", cantidad=" + cantidad + ", direccion=" + direccion + ", nombre="
+		return "Pedido [nombre=" + nombre + ", cantidad=" + cantidad + ", direccion=" + direccion + ", nombre="
 				+ nombre + ", fecha=" + fecha + "]";
 	}
 
-	public String getNombreProducto() {
-		return nombreProducto;
+	public String getNombre() {
+		return nombre;
 	}
 
-	public void setNombreProducto(String nombreProducto) {
-		this.nombreProducto = nombreProducto;
+	public void setNombre(String nombreProducto) {
+		this.nombre = nombreProducto;
 	}
 
 	public int getCantidad() {
@@ -50,12 +53,12 @@ public class Pedido {
 		this.direccion = direccion;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getDestinatario() {
+		return destinatario;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setDestinatario(String destinatario) {
+		this.destinatario = destinatario;
 	}
 
 	public String getFecha() {
