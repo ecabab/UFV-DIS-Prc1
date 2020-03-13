@@ -2,4 +2,7 @@
 target/
 
 # Ficheros
+.classpath
+.project
+.settings/
 Tienda_XML.xml
